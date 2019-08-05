@@ -31,7 +31,8 @@ module "security" {
 }
 
 module "compute" {
-  source              = "./compute"
-  resource_group_name = "${module.resource_group.rg_name}"
-  location            = "${module.resource_group.rg_loc}"
+  source               = "./compute"
+  resource_group_name  = "${module.resource_group.rg_name}"
+  location             = "${module.resource_group.rg_loc}"
+  network_interface_id = "${module.security.network_interface_id}"
 }
