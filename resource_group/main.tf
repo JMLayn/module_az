@@ -14,11 +14,3 @@ resource "azurerm_resource_group" "WkstDemo" {
     X-Project       = "${var.X-Project}"
   }
 }
-
-output "rg_name" {
-  value = "${azurerm_resource_group.WkstDemo.name}"
-}
-
-output "rg_loc" {
-  value = "${azurerm_resource_group.WkstDemo.location}"
-}

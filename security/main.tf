@@ -29,7 +29,3 @@ resource "azurerm_network_interface" "WkstDemo" {
     public_ip_address_id          = "${var.ip_address_id}"
   }
 }
-
-output "network_interface_id" {
-  value = "${azurerm_network_interface.WkstDemo.id}"
-}

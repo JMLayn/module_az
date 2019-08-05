@@ -19,15 +19,3 @@ resource "azurerm_public_ip" "WkstDemo" {
   location            = "${var.location}"
   allocation_method   = "Dynamic"
 }
-
-output "subnet_id" {
-  value = "${azurerm_subnet.WkstDemo.id}"
-}
-
-output "ip_address_id" {
-  value = "${azurerm_public_ip.WkstDemo.id}"
-}
-
-output "ip_address" {
-  value = "${azurerm_public_ip.WkstDemo.name}"
-}
