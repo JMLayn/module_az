@@ -36,3 +36,8 @@ module "compute" {
   location             = "${module.resource_group.rg_loc}"
   network_interface_id = "${module.security.network_interface_id}"
 }
+
+data "azurerm_public_ip" "WkstDemo" {
+  name = "${module.network.name}"
+  resource_group_name = "${module.resource_group.rg_name}"
+}
