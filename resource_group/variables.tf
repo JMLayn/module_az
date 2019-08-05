@@ -1,5 +1,6 @@
 #-------------resource_group/variables.tf----------
 variable "resourceGroup" {}
+
 variable "resourceLocation" {}
 variable "x-do-not-remove" {}
 variable "X-Contact" {}

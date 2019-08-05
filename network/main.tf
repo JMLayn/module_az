@@ -14,15 +14,16 @@ resource "azurerm_subnet" "WkstDemo" {
 }
 
 resource "azurerm_public_ip" "WkstDemo" {
-  name                         = "WkstDemoPublicIp"
-  resource_group_name          = "${var.resource_group_name}"
-  location                     = "${var.location}"
-  allocation_method            = "Dynamic"
+  name                = "WkstDemoPublicIp"
+  resource_group_name = "${var.resource_group_name}"
+  location            = "${var.location}"
+  allocation_method   = "Dynamic"
 }
 
 output "subnet_id" {
   value = "${azurerm_subnet.WkstDemo.id}"
 }
+
 output "ip_address_id" {
   value = "${azurerm_public_ip.WkstDemo.id}"
 }

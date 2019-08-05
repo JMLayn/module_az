@@ -7,17 +7,18 @@ resource "azurerm_resource_group" "WkstDemo" {
 
   tags {
     x-do-not-remove = "${var.x-do-not-remove}"
-    X-Contact     = "${var.X-Contact}"
-    X-Application = "${var.X-Application}"
-    X-Dept        = "${var.X-Dept}"
-    X-Customer    = "${var.X-Customer}"
-    X-Project     = "${var.X-Project}"
+    X-Contact       = "${var.X-Contact}"
+    X-Application   = "${var.X-Application}"
+    X-Dept          = "${var.X-Dept}"
+    X-Customer      = "${var.X-Customer}"
+    X-Project       = "${var.X-Project}"
   }
 }
 
-output "rg_name"{
+output "rg_name" {
   value = "${azurerm_resource_group.WkstDemo.name}"
 }
-output "rg_loc"{
+
+output "rg_loc" {
   value = "${azurerm_resource_group.WkstDemo.location}"
 }
