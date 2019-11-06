@@ -1,7 +1,7 @@
 #-------------root/main.tf----------
 
 provider "azurerm" {
-  version = "=1.21.0"
+  version = "~>1.27.0"
 }
 
 module "resource_group" {
@@ -38,6 +38,6 @@ module "compute" {
 }
 
 data "azurerm_public_ip" "WkstDemo" {
-  name = "${module.network.name}"
+  name                = "${module.network.name}"
   resource_group_name = "${module.resource_group.rg_name}"
 }
